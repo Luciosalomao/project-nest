@@ -16,7 +16,7 @@ export class AlunoService {
   async listarTodos(): Promise<Aluno[]> {
     return this.alunoRepository.find();
   }
-  
+
   async buscarPorId(id: number): Promise<Aluno> {
     const aluno = await this.alunoRepository.findOne({ where: { id } });
 
@@ -52,5 +52,4 @@ export class AlunoService {
     const alunoAtualizado = Object.assign(aluno, updateAlunoDto);
     return this.alunoRepository.save(alunoAtualizado);
   }
-
 }

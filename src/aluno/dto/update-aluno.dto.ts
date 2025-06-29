@@ -1,3 +1,3 @@
 export class UpdateAlunoDto {
-  nome?: string; 
+  nome?: string;
 }

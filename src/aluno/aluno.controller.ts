@@ -1,6 +1,14 @@
 import { AlunoService } from './aluno.service';
 import { Aluno } from './aluno.entity';
-import { Controller, Get, Post, Delete, Put, Param, Body } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Delete,
+  Put,
+  Param,
+  Body,
+} from '@nestjs/common';
 import { CreateAlunoDto } from './dto/create-aluno.dto';
 import { UpdateAlunoDto } from './dto/update-aluno.dto';
 
@@ -35,5 +43,4 @@ export class AlunoController {
   ): Promise<Aluno> {
     return this.alunoService.atualizar(Number(id), updateAlunoDto);
   }
-
 }
